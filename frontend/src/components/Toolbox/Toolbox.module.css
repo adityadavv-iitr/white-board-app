@@ -1,0 +1,65 @@
+.toolbox {
+  position: fixed;
+  bottom: 90px; /* 👈 above toolbar */
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: min(92vw, 500px);
+  padding: 16px;
+
+  border-radius: 16px;
+
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(14px);
+
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+
+  z-index: 999;
+}
+
+/* Sections */
+.section {
+  margin-bottom: 14px;
+}
+
+.title {
+  font-size: 11px;
+  font-weight: 600;
+  color: #64748b;
+  margin-bottom: 8px;
+}
+
+/* Colors */
+.colorContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.colorBox {
+  width: 22px;
+  height: 22px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.active {
+  outline: 2px solid #6366f1;
+}
+
+/* Slider */
+.slider {
+  width: 100%;
+}
+
+/* 🖥 Desktop */
+@media (min-width: 900px) {
+  .toolbox {
+    left: 20px;
+    top: 50%;
+    bottom: auto;
+    transform: translateY(-50%);
+    width: 220px;
+  }
+}
